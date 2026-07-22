@@ -782,3 +782,192 @@ nav ul{
 }
 
 }
+/* ===============================
+   STAR BACKGROUND
+================================ */
+
+.stars{
+
+position:fixed;
+
+inset:0;
+
+overflow:hidden;
+
+z-index:-2;
+
+}
+
+
+.star{
+
+position:absolute;
+
+width:3px;
+
+height:3px;
+
+background:white;
+
+border-radius:50%;
+
+box-shadow:
+0 0 10px white,
+0 0 20px #FFD700;
+
+
+animation:twinkle infinite alternate;
+
+
+}
+
+
+@keyframes twinkle{
+
+from{
+
+opacity:.2;
+
+transform:scale(.5);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:scale(1.5);
+
+}
+
+}
+
+
+
+/* ===============================
+   MOUSE GLOW
+================================ */
+
+
+.mouse-glow{
+
+position:fixed;
+
+width:180px;
+
+height:180px;
+
+background:
+
+radial-gradient(
+circle,
+rgba(255,215,0,.25),
+transparent 70%
+);
+
+
+border-radius:50%;
+
+pointer-events:none;
+
+transform:translate(-50%,-50%);
+
+z-index:-1;
+
+}
+
+
+
+/* ===============================
+   REVEAL
+================================ */
+
+
+.hidden{
+
+opacity:0;
+
+transform:
+translateY(50px);
+
+transition:1s;
+
+}
+
+
+.show{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+}
+
+
+
+/* ===============================
+   MOBILE MENU
+================================ */
+
+
+.menu-btn{
+
+display:none;
+
+font-size:28px;
+
+color:#FFD700;
+
+cursor:pointer;
+
+}
+
+
+@media(max-width:700px){
+
+
+.menu-btn{
+
+display:block;
+
+}
+
+
+nav ul{
+
+
+position:absolute;
+
+top:80px;
+
+left:0;
+
+width:100%;
+
+
+background:
+rgba(20,0,40,.95);
+
+
+display:none;
+
+flex-direction:column;
+
+align-items:center;
+
+padding:30px;
+
+
+}
+
+
+nav ul.open{
+
+display:flex;
+
+}
+
+
+}
